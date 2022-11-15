@@ -1,0 +1,6 @@
+CREATE PROCEDURE ResultView(IN id int)
+LANGUAGE SQLSCRIPT READS SQL DATA WITH RESULT VIEW ProcView 
+AS
+ BEGIN
+   select * from CUSTOMER where CUST_ID = :id;
+ END
